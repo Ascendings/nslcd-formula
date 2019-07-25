@@ -1,0 +1,10 @@
+nslcd:
+  package_name: nslcd
+
+  conf_path: /etc/nslcd.conf
+  conf_user: root
+  conf_group: root
+  conf_mode: 640
+
+  service_name: nslcd
+  service_enable: True

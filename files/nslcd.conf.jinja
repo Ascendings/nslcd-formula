@@ -1,0 +1,10 @@
+{% set nslcd_conf = salt['pillar']['get']('nslcd') -%}
+
+#
+## This file is being managed by Salt. 
+## Any manual modifications will be overwritten the next time Salt runs.
+#
+
+{% for key,value in nslcd_conf.items() -%}
+	{{ key }} = {{ value }}
+{% endfor %}
