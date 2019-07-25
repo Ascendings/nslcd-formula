@@ -18,6 +18,7 @@ nslcd_conf:
 nslcd_service:
   service.running:
     - name: {{ nslcd.service_name }}
+    - enable: {{ nslcd.service_enable }}
     - watch:
       - pkg: nslcd_package
       - file: nslcd_conf
